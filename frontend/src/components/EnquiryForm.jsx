@@ -6,7 +6,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { SERVICES } from "../data/content";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${import.meta.env.VITE_BACKEND_URL}/api`;
 
 export default function EnquiryForm({ defaultService = "" }) {
   const [form, setForm] = useState({
