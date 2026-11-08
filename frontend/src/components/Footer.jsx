@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <Link to="/" className="flex items-center" data-testid="footer-logo">
-            <img src="/sl-logo-t.png" alt="SL Launchers — Software Solutions" className="h-12 w-auto" />
+            <img src="/sl-logo-t.png" alt="SL Launchers — Software Solutions" className="h-12 w-auto" style={{ filter: "drop-shadow(0 0 0.75px white) drop-shadow(0 0 0.75px white)" }} />
           </Link>
           <p className="text-sm text-zinc-400 mt-4 leading-relaxed">
             A USA-based software house delivering web development, digital marketing, AI and blockchain - everything under one roof, for clients worldwide.

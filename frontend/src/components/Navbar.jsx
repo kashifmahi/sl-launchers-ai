@@ -37,7 +37,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center" data-testid="logo-link">
-          <img src="/sl-logo-t.png" alt="SL Launchers — Software Solutions" className="h-10 w-auto" />
+          <img src="/sl-logo-t.png" alt="SL Launchers — Software Solutions" className="h-10 w-auto" style={{ filter: "drop-shadow(0 0 0.75px white) drop-shadow(0 0 0.75px white)" }} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1" data-testid="nav-links">
