@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Rocket, Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { CONTACT } from "../data/content";
 
@@ -36,13 +36,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5" data-testid="logo-link">
-          <span className="w-9 h-9 rounded-md bg-blue-600 flex items-center justify-center">
-            <Rocket className="w-5 h-5 text-white" />
-          </span>
-          <span className="font-heading font-800 font-extrabold text-lg tracking-tight">
-            SL <span className="text-gradient-blue">Launchers</span>
-          </span>
+        <Link to="/" className="flex items-center" data-testid="logo-link">
+          <img src="/sl-logo-t.png" alt="SL Launchers — Software Solutions" className="h-10 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1" data-testid="nav-links">

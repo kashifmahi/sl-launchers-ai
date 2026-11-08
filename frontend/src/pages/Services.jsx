@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import Reveal from "../components/Reveal";
+import Seo from "../components/Seo";
 import { Button } from "../components/ui/button";
 import { SERVICES, INDUSTRIES, IMAGES } from "../data/content";
 
 export default function Services() {
   return (
     <div data-testid="services-page">
+      <Seo
+        title="Services — Web Development, SEO, AI, Blockchain & Marketing"
+        description="Full-stack growth services from SL Launchers: web design & development, SEO, social media marketing, PPC, blockchain development and AI development."
+        path="/services"
+      />
       {/* HERO */}
       <section className="relative overflow-hidden pt-32 sm:pt-44 pb-16 sm:pb-24" data-testid="services-hero">
         <div className="hero-glow w-[500px] h-[500px] bg-blue-600/20 -top-40 -right-40" />

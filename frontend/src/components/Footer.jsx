@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Rocket, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { CONTACT, SERVICES } from "../data/content";
 
 export default function Footer() {
@@ -7,13 +7,8 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-black" data-testid="footer">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <Link to="/" className="flex items-center gap-2.5" data-testid="footer-logo">
-            <span className="w-9 h-9 rounded-md bg-blue-600 flex items-center justify-center">
-              <Rocket className="w-5 h-5 text-white" />
-            </span>
-            <span className="font-heading font-extrabold text-lg tracking-tight">
-              SL <span className="text-gradient-blue">Launchers</span>
-            </span>
+          <Link to="/" className="flex items-center" data-testid="footer-logo">
+            <img src="/sl-logo-t.png" alt="SL Launchers — Software Solutions" className="h-12 w-auto" />
           </Link>
           <p className="text-sm text-zinc-400 mt-4 leading-relaxed">
             A USA-based software house delivering web development, digital marketing, AI and blockchain - everything under one roof, for clients worldwide.

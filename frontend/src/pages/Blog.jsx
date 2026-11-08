@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast } from "sonner";
 import { ArrowRight, Clock } from "lucide-react";
 import Reveal from "../components/Reveal";
+import Seo from "../components/Seo";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { BLOG_POSTS } from "../data/content";
@@ -35,6 +36,11 @@ export default function Blog() {
 
   return (
     <div data-testid="blog-page">
+      <Seo
+        title="Blog — Insights on Software, AI, Blockchain & Marketing"
+        description="Strategic insights for digital growth from SL Launchers: industry trends, practical guides and what's next in software, AI, blockchain and digital marketing."
+        path="/blog"
+      />
       {/* HERO */}
       <section className="relative overflow-hidden pt-32 sm:pt-44 pb-16 sm:pb-24" data-testid="blog-hero">
         <div className="hero-glow w-[500px] h-[500px] bg-blue-600/20 -top-40 -left-40" />

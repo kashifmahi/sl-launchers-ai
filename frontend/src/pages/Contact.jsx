@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
 import Reveal from "../components/Reveal";
+import Seo from "../components/Seo";
 import EnquiryForm from "../components/EnquiryForm";
 import { CONTACT } from "../data/content";
 
@@ -40,6 +41,11 @@ export default function Contact() {
 
   return (
     <div data-testid="contact-page">
+      <Seo
+        title="Contact — Start Your Project"
+        description="Tell SL Launchers about your project — web development, SEO, AI or blockchain — and we'll respond within one business day with clear next steps."
+        path="/contact"
+      />
       <section className="relative overflow-hidden pt-32 sm:pt-44 pb-24 sm:pb-32" data-testid="contact-hero">
         <div className="hero-glow w-[500px] h-[500px] bg-blue-600/20 -top-40 -right-40" />
         <div className="max-w-7xl mx-auto px-5 sm:px-8 relative">

@@ -26,9 +26,11 @@
 - Real stats (currently 100+ projects, 40+ clients placeholders), real client testimonials, real client logos
 - Logo file if they have one (currently Rocket icon + text)
 
+- 2026-11-08: SEO & AI-search setup — static head (title, description, canonical → https://sllaunchers.com, OG/Twitter, Organization JSON-LD with confirmed email+phone, favicon = logo mark), robots.txt with AI-crawler group, sitemap.xml (4 routes), llms.txt, noscript fallback, per-route meta via react-helmet-async. Pending deploy: enable "Search Engine Crawling and Optimisation" toggle and verify on live domain. Real client logo (transparent) placed in navbar/footer; assets in /app/frontend/public (sl-logo.webp, sl-logo-t.png, sl-mark.png).
+- 2026-11-08: Contact details set — info@sllaunchers.com, +61 468 187 586 (call/WhatsApp) in /app/frontend/src/data/content.js CONTACT.
+
 ## Backlog
 - P1: Real contact details + real testimonials/stats from user
 - P1: Book-a-call scheduling (Calendly embed or custom booking)
 - P2: Individual blog article pages, case studies page
-- P2: SEO meta/OG tags, sitemap, AI-crawler setup
 - P2: Email notification on new enquiry (Resend managed integration)

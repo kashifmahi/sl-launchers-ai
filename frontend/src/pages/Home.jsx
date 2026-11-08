@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { ArrowRight, CheckCircle2, Quote, Phone } from "lucide-react";
 import Reveal from "../components/Reveal";
+import Seo from "../components/Seo";
 import EnquiryForm from "../components/EnquiryForm";
 import { Button } from "../components/ui/button";
 import { SERVICES, PROCESS, WHY_US, INDUSTRIES, STATS, TESTIMONIALS, IMAGES, CONTACT } from "../data/content";
@@ -9,6 +10,11 @@ import { SERVICES, PROCESS, WHY_US, INDUSTRIES, STATS, TESTIMONIALS, IMAGES, CON
 export default function Home() {
   return (
     <div data-testid="home-page">
+      <Seo
+        title="SL Launchers — Software, Marketing, AI & Blockchain Under One Roof"
+        description="SL Launchers builds websites, grows your traffic, and engineers AI and blockchain products — one accountable team for startups, businesses and enterprises."
+        path="/"
+      />
       {/* HERO */}
       <section className="relative overflow-hidden pt-32 sm:pt-44 pb-20 sm:pb-28" data-testid="hero-section">
         <div className="hero-glow w-[500px] h-[500px] bg-blue-600/25 -top-40 -left-40" />
