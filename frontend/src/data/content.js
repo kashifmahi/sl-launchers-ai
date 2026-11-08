@@ -15,9 +15,9 @@ import {
 
 export const CONTACT = {
   email: "info@sllaunchers.com",
-  phone: "+1 555 010 2244", // placeholder - confirm real phone
-  whatsapp: "15550102244", // placeholder - confirm real WhatsApp number
-  location: "USA - serving clients worldwide",
+  phone: "+61 468 187 586",
+  whatsapp: "61468187586",
+  location: "USA - serving clients worldwide", // phone is Australian (+61) — confirm if location should change
 };
 
 export const SERVICES = [
