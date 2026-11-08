@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const SITE = "https://sllaunchers.com";
 const DEFAULT_DESC =
-  "SL Launchers builds websites, grows your traffic, and engineers AI and blockchain products — one accountable team for startups, businesses and enterprises.";
+  "SL Launchers builds websites, custom applications, AI automation and blockchain platforms — one accountable team serving clients worldwide.";
 
 export default function Seo({ title, description = DEFAULT_DESC, path = "/" }) {
   const fullTitle = path === "/" ? title : `${title} | SL Launchers`;
