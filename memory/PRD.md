@@ -21,7 +21,7 @@
 - 2026-11-08: Initial build. Multi-page dark-theme marketing site (Home: hero, trust ticker, services, process, why-us, industries, stats, testimonials, CTA form; Services: 6 detailed services incl. Blockchain + AI; Blog: featured + grid + newsletter signup; Contact: info cards + enquiry form). Backend: enquiries + newsletter collections with indexes. Contact form and newsletter submit to backend (verified end-to-end). Floating WhatsApp + call buttons. Mobile responsive (verified at 390px).
 
 ## Placeholders Still Needed From User
-- Real email, phone number, WhatsApp number (currently hello@sllaunchers.com / +1 555 010 2244 placeholders in /app/frontend/src/data/content.js CONTACT)
+- Real phone number, WhatsApp number (currently +1 555 010 2244 placeholders; email confirmed as info@sllaunchers.com — /app/frontend/src/data/content.js CONTACT)
 - Real stats (currently 100+ projects, 40+ clients placeholders), real client testimonials, real client logos
 - Logo file if they have one (currently Rocket icon + text)
 

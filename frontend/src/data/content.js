@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const CONTACT = {
-  email: "hello@sllaunchers.com", // placeholder - confirm real email
+  email: "info@sllaunchers.com",
   phone: "+1 555 010 2244", // placeholder - confirm real phone
   whatsapp: "15550102244", // placeholder - confirm real WhatsApp number
   location: "USA - serving clients worldwide",
