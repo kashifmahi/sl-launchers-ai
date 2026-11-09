@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Marquee from "react-fast-marquee";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import Reveal from "../components/Reveal";
 import Seo from "../components/Seo";
@@ -17,64 +16,51 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="bg-white pt-28 sm:pt-40 pb-16 sm:pb-24" data-testid="hero-section">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Reveal>
-                <span className="text-xs tracking-[0.25em] uppercase font-bold text-blue-600" data-testid="hero-eyebrow">
-                  Serving Clients Worldwide
-                </span>
-              </Reveal>
-              <Reveal delay={0.08}>
-                <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.4rem] font-bold tracking-tight text-[#0B1739] mt-5 leading-[1.1]" data-testid="hero-heading">
-                  Software, AI & Blockchain.{" "}
-                  <span className="text-gradient-blue">Built for Your Business.</span>
-                </h1>
-              </Reveal>
-              <Reveal delay={0.16}>
-                <p className="text-base sm:text-lg leading-relaxed text-slate-500 mt-6 max-w-xl" data-testid="hero-subheading">
-                  From websites and custom applications to intelligent automation and blockchain platforms, SL Launchers brings development and digital growth together in one team.
-                </p>
-              </Reveal>
-              <Reveal delay={0.24}>
-                <div className="flex flex-wrap gap-4 mt-9">
-                  <Button asChild size="lg" className="rounded-md bg-blue-600 hover:bg-blue-500 text-white px-7 min-h-12" data-testid="hero-cta-primary">
-                    <Link to="/contact">
-                      Start Your Project <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline" className="rounded-md bg-white hover:bg-slate-50 border-slate-300 text-[#0B1739] px-7 min-h-12" data-testid="hero-cta-secondary">
-                    <Link to="/services">Explore Services</Link>
-                  </Button>
-                </div>
-              </Reveal>
+      <section className="bg-[#F3F7FF] pt-28 sm:pt-40 pb-16 sm:pb-24" data-testid="hero-section">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 text-center">
+          <Reveal>
+            <span className="text-xs tracking-[0.25em] uppercase font-bold text-blue-600" data-testid="hero-eyebrow">
+              Serving Clients Worldwide
+            </span>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.4rem] font-bold tracking-tight text-[#0B1739] mt-5 leading-[1.1] max-w-4xl mx-auto" data-testid="hero-heading">
+              Software, AI & Blockchain.{" "}
+              <span className="text-gradient-blue">Built for Your Business.</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="text-base sm:text-lg leading-relaxed text-slate-500 mt-6 max-w-2xl mx-auto" data-testid="hero-subheading">
+              From websites and custom applications to intelligent automation and blockchain platforms, SL Launchers brings development and digital growth together in one team.
+            </p>
+          </Reveal>
+          <Reveal delay={0.24}>
+            <div className="flex flex-wrap justify-center gap-4 mt-9">
+              <Button asChild size="lg" className="rounded-md bg-blue-600 hover:bg-blue-500 text-white px-7 min-h-12" data-testid="hero-cta-primary">
+                <Link to="/contact">
+                  Start Your Project <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-md bg-white hover:bg-slate-50 border-slate-300 text-[#0B1739] px-7 min-h-12" data-testid="hero-cta-secondary">
+                <Link to="/services">Explore Services</Link>
+              </Button>
             </div>
-            <Reveal delay={0.15}>
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-[#F3F7FF]">
-                <img
-                  src="/sl-hero.webp"
-                  alt="Software development concept illustration"
-                  className="w-full h-full object-cover aspect-[4/3]"
-                />
-              </div>
-            </Reveal>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* TRUST TICKER */}
-      <section className="border-y border-slate-200 py-8 bg-[#F3F7FF]" data-testid="trust-ticker">
+      {/* INDUSTRIES STRIP */}
+      <section className="border-y border-slate-200 py-8 bg-white" data-testid="trust-ticker">
         <p className="text-center text-xs tracking-[0.25em] uppercase font-bold text-slate-400 mb-6">
           Serving startups, businesses and enterprises worldwide
         </p>
-        <Marquee speed={40} gradient={false}>
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 flex flex-wrap justify-center gap-x-8 gap-y-3">
           {["SaaS & Startups", "E-commerce", "Healthcare", "Real Estate", "Fintech & Web3", "Professional Services", "Hospitality", "AI Products"].map((n) => (
-            <span key={n} className="mx-8 text-slate-500 font-heading font-semibold text-sm tracking-wide" data-testid="ticker-item">
+            <span key={n} className="text-slate-500 font-heading font-semibold text-sm tracking-wide" data-testid="ticker-item">
               {n}
             </span>
           ))}
-        </Marquee>
+        </div>
       </section>
 
       {/* SERVICES OVERVIEW */}
@@ -94,6 +80,14 @@ export default function Home() {
                     <s.icon className="w-9 h-9 text-blue-600" />
                     <h3 className="font-heading text-xl font-semibold text-[#0B1739] mt-5">{s.title}</h3>
                     <p className="text-sm text-slate-500 leading-relaxed mt-2.5">{s.tagline}</p>
+                    <ul className="mt-4 space-y-1.5">
+                      {s.items.slice(0, 3).map((item) => (
+                        <li key={item} className="text-sm text-slate-600 flex items-start gap-2">
+                          <span className="w-1 h-1 rounded-full bg-blue-600 mt-2 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                     <span className="inline-flex items-center gap-1.5 text-sm text-blue-600 font-medium mt-auto pt-5">
                       Learn more <ArrowRight className="w-3.5 h-3.5" />
                     </span>
