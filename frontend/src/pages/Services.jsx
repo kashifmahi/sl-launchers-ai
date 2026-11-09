@@ -113,6 +113,43 @@ export default function Services() {
         </div>
       </section>
 
+      {/* HOW WE WORK */}
+      <section className="py-20 sm:py-28 bg-white" data-testid="services-approach">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <Reveal>
+            <span className="text-xs tracking-[0.25em] uppercase font-bold text-blue-600">How We Work</span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1739] mt-4">
+              One team, from first sketch to live product
+            </h2>
+            <p className="text-base text-slate-500 leading-relaxed mt-5">
+              Most businesses outgrow the patchwork approach — a freelancer for the website, another vendor for ads, a third for anything technical. Every handover loses context, and nobody owns the final result. We built SL Launchers to remove that friction: strategy, design, engineering and marketing sit in one team, so the people who plan your project are the same people who build and grow it.
+            </p>
+            <p className="text-base text-slate-500 leading-relaxed mt-4">
+              That structure matters most when a project spans more than one discipline. A new website rarely succeeds on design alone — it needs to rank, convert and connect to the systems your business already runs on. Because our developers work alongside our marketing specialists from day one, those requirements are designed in from the start rather than bolted on afterwards.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="rounded-xl bg-[#F3F7FF] border border-slate-200 p-8">
+              <h3 className="font-heading text-lg font-bold text-[#0B1739]">What you can expect</h3>
+              <ul className="mt-5 space-y-4">
+                {[
+                  "A dedicated point of contact from discovery through launch",
+                  "Clear scope, timeline and pricing agreed before any work begins",
+                  "Regular progress updates in plain language, not technical jargon",
+                  "Transparent reporting on what was delivered and what it achieved",
+                  "Support and maintenance options for after your project goes live",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-sm text-slate-600">
+                    <Check className="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 sm:py-28 bg-white" data-testid="services-cta">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
@@ -121,7 +158,7 @@ export default function Services() {
               Not sure which service is right for you?
             </h2>
             <p className="text-base sm:text-lg text-slate-500 mt-5">
-              Tell us what you're trying to achieve and we'll identify the right mix for your goals and budget.
+              Tell us what you're trying to achieve and we'll identify the right mix for your goals and budget. There's no obligation — the first conversation is about understanding your business, not selling you something you don't need.
             </p>
             <Button asChild size="lg" className="mt-8 rounded-md bg-blue-600 hover:bg-blue-500 text-white px-8 min-h-12" data-testid="services-cta-button">
               <Link to="/contact">Discuss Your Project <ArrowRight className="ml-2 w-4 h-4" /></Link>

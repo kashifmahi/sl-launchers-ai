@@ -32,7 +32,10 @@ export default function Contact() {
               Let's build something <span className="text-gradient-blue">great together</span>
             </h1>
             <p className="text-base sm:text-lg leading-relaxed text-slate-500 mt-6 max-w-2xl">
-              Tell us about your project and we'll respond within one business day with clear next steps.
+              Tell us about your project and we'll respond within one business day with clear next steps. Whether you need a new website, a custom application, AI automation, a blockchain platform or a growth campaign, the fastest way to start is a short conversation about where your business is heading.
+            </p>
+            <p className="text-base text-slate-500 leading-relaxed mt-4 max-w-2xl">
+              Every inquiry is read by a member of our team — not routed through a call centre. If your project isn't a good fit for us, we'll tell you honestly and point you in the right direction.
             </p>
           </Reveal>
 
