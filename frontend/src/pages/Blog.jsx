@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock } from "lucide-react";
 import Reveal from "../components/Reveal";
+import PageHero from "../components/PageHero";
 import Seo from "../components/Seo";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
@@ -43,29 +44,19 @@ export default function Blog() {
         path="/blog"
       />
 
-      {/* HERO */}
-      <section className="bg-[#F3F7FF] border-b border-slate-200 pt-28 sm:pt-40 pb-14 sm:pb-20" data-testid="blog-hero">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <Reveal>
-            <span className="text-xs tracking-[0.25em] uppercase font-bold text-blue-600">Insights</span>
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-[#0B1739] mt-5 max-w-3xl leading-[1.1]">
-              Strategic insights for <span className="text-gradient-blue">digital growth</span>
-            </h1>
-            <p className="text-base sm:text-lg leading-relaxed text-slate-500 mt-6 max-w-2xl">
-              Industry trends, practical guides and what's next in software, AI, blockchain and digital marketing.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero eyebrow="Insights" title="Strategic insights for" highlight="digital growth" testid="blog-hero">
+        <p>Industry trends, practical guides and what's next in software, AI, blockchain and digital marketing.</p>
+      </PageHero>
 
       {/* FEATURED */}
       <section className="py-16 bg-white" data-testid="blog-featured">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <Reveal>
             <Link to={`/blog/${featured.slug}`} className="block" data-testid="featured-post-link">
-              <div className="card-lift rounded-xl bg-white border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-                <div className="bg-[#F3F7FF] min-h-64 lg:min-h-0 flex items-center justify-center">
-                  <span className="font-heading text-6xl font-black text-blue-600/15">AI</span>
+              <div className="card-lift rounded-2xl bg-white border border-slate-200 overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+                <div className="relative min-h-64 lg:min-h-0 bg-ink overflow-hidden">
+                  <img src="/sl-hero.webp" alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" loading="lazy" />
+                  <span className="absolute top-5 left-5 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0B1739]">Featured</span>
                 </div>
                 <div className="p-8 sm:p-10">
                   <span className="text-xs tracking-[0.2em] uppercase font-bold text-cyan-600">{featured.category}</span>
@@ -91,7 +82,7 @@ export default function Blog() {
           {rest.map((p, i) => (
             <Reveal key={p.slug} delay={i * 0.05}>
               <Link to={`/blog/${p.slug}`} className="block h-full" data-testid={`blog-card-${p.slug}`}>
-                <div className="card-lift rounded-xl bg-white border border-slate-200 p-8 h-full flex flex-col">
+                <div className="card-lift rounded-2xl bg-white border border-slate-200 p-8 h-full flex flex-col">
                   <span className="text-xs tracking-[0.2em] uppercase font-bold text-cyan-600">{p.category}</span>
                   <h3 className="font-heading text-xl font-bold text-[#0B1739] mt-3">{p.title}</h3>
                   <p className="text-sm text-slate-500 leading-relaxed mt-3 mb-6">{p.excerpt}</p>
@@ -107,7 +98,7 @@ export default function Blog() {
       </section>
 
       {/* NEWSLETTER */}
-      <section className="py-20 sm:py-28 bg-[#F3F7FF] border-t border-slate-200" data-testid="newsletter-section">
+      <section className="py-20 sm:py-28 bg-[#F5F8FF]" data-testid="newsletter-section">
         <div className="max-w-2xl mx-auto px-5 sm:px-8 text-center">
           <Reveal>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-[#0B1739]">
@@ -125,7 +116,7 @@ export default function Blog() {
                 className="bg-white border-slate-200 focus:border-blue-500 h-12 text-[#0B1739] placeholder:text-slate-400 flex-1"
                 data-testid="newsletter-email-input"
               />
-              <Button type="submit" disabled={sending} className="h-12 rounded-md bg-blue-600 hover:bg-blue-500 text-white px-6" data-testid="newsletter-submit-button">
+              <Button type="submit" disabled={sending} className="h-12 rounded-full bg-blue-600 hover:bg-blue-500 text-white px-6" data-testid="newsletter-submit-button">
                 {sending ? "Subscribing..." : "Subscribe"} <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </form>

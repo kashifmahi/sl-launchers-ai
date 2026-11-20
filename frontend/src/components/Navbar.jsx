@@ -7,6 +7,7 @@ import { CONTACT } from "../data/content";
 const links = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/#industries", label: "Industries" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
@@ -29,8 +30,10 @@ export default function Navbar() {
   return (
     <header
       data-testid="navbar"
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#0B1739] transition-shadow duration-200 ${
-        scrolled || open ? "shadow-lg shadow-black/20" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow,border-color] duration-300 border-b ${
+        scrolled || open
+          ? "bg-[#060B1D]/85 backdrop-blur-xl border-white/10 shadow-lg shadow-black/20"
+          : "bg-transparent border-transparent"
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
@@ -38,7 +41,7 @@ export default function Navbar() {
           <img
             src="/sl-logo-t.png"
             alt="SL Launchers — Software Solutions"
-            className="h-11 sm:h-14 w-auto"
+            className="h-10 sm:h-12 w-auto"
           />
         </Link>
 
@@ -47,10 +50,11 @@ export default function Navbar() {
             <NavLink
               key={l.to}
               to={l.to}
+              end={l.to === "/"}
               data-testid={`nav-${l.label.toLowerCase()}`}
               className={({ isActive }) =>
                 `px-4 py-2.5 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  isActive ? "text-white bg-white/10" : "text-blue-100/80 hover:text-white"
+                  isActive && !l.to.includes("#") ? "text-white bg-white/10" : "text-slate-300 hover:text-white hover:bg-white/5"
                 }`
               }
             >
@@ -62,13 +66,13 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <a
             href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
-            className="text-sm text-blue-100/80 hover:text-white transition-colors duration-200 flex items-center gap-2"
+            className="hidden lg:flex text-sm text-slate-300 hover:text-white transition-colors duration-200 items-center gap-2"
             data-testid="nav-phone-link"
           >
             <Phone className="w-4 h-4" /> {CONTACT.phone}
           </a>
-          <Button asChild className="rounded-md bg-blue-600 hover:bg-blue-500 text-white min-h-11" data-testid="nav-cta-button">
-            <Link to="/contact">Discuss Your Project</Link>
+          <Button asChild className="rounded-full bg-blue-600 hover:bg-blue-500 text-white min-h-11 px-5 shadow-lg shadow-blue-600/30" data-testid="nav-cta-button">
+            <Link to="/contact">Book a Call</Link>
           </Button>
         </div>
 
@@ -84,23 +88,24 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-white/10 bg-[#0B1739] px-5 py-4 flex flex-col gap-1" data-testid="mobile-menu">
+        <div className="md:hidden border-t border-white/10 bg-[#060B1D] px-5 py-4 flex flex-col gap-1" data-testid="mobile-menu">
           {links.map((l) => (
             <NavLink
               key={l.to}
               to={l.to}
+              end={l.to === "/"}
               data-testid={`mobile-nav-${l.label.toLowerCase()}`}
               className={({ isActive }) =>
                 `px-4 py-3.5 rounded-md text-sm font-medium transition-colors duration-200 min-h-11 flex items-center ${
-                  isActive ? "text-white bg-white/10" : "text-blue-100/80"
+                  isActive && !l.to.includes("#") ? "text-white bg-white/10" : "text-slate-300"
                 }`
               }
             >
               {l.label}
             </NavLink>
           ))}
-          <Button asChild className="mt-2 rounded-md bg-blue-600 hover:bg-blue-500 text-white min-h-11" data-testid="mobile-nav-cta-button">
-            <Link to="/contact">Discuss Your Project</Link>
+          <Button asChild className="mt-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white min-h-11" data-testid="mobile-nav-cta-button">
+            <Link to="/contact">Book a Call</Link>
           </Button>
         </div>
       )}

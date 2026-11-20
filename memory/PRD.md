@@ -34,3 +34,5 @@
 - P1: Book-a-call scheduling (Calendly embed or custom booking)
 - P2: Individual blog article pages, case studies page
 - P2: Email notification on new enquiry (Resend managed integration)
+
+- 2026-11-21: Visual redesign (Claude). Dark "ink" hero with grid + glow and code/AI/contract cards, tech-stack marquee, bento services (AI + Blockchain featured with images), dark Why-Us (fixed invisible headings: global h1-h4 colour moved into @layer base), centred process timeline, engagement models (no prices), clickable industry cards, FAQ accordion, dark CTA with form. Shared PageHero for Services/Blog/Contact; BlogPost/Privacy heroes darkened. Navbar transparent over hero, glass on scroll, "Industries" link. New data in content.js: TECH_STACK, ENGAGEMENTS, FAQS. Still no fabricated stats/testimonials — add real ones when available.

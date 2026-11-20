@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
 import Reveal from "../components/Reveal";
+import PageHero from "../components/PageHero";
 import Seo from "../components/Seo";
 import EnquiryForm from "../components/EnquiryForm";
 import { CONTACT } from "../data/content";
@@ -24,22 +25,18 @@ export default function Contact() {
         path="/contact"
       />
 
-      <section className="bg-[#F3F7FF] border-b border-slate-200 pt-28 sm:pt-40 pb-16 sm:pb-24" data-testid="contact-hero">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <Reveal>
-            <span className="text-xs tracking-[0.25em] uppercase font-bold text-blue-600">Contact</span>
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-[#0B1739] mt-5 max-w-3xl leading-[1.1]">
-              Let's build something <span className="text-gradient-blue">great together</span>
-            </h1>
-            <p className="text-base sm:text-lg leading-relaxed text-slate-500 mt-6 max-w-2xl">
-              Tell us about your project and we'll respond within one business day with clear next steps. Whether you need a new website, a custom application, AI automation, a blockchain platform or a growth campaign, the fastest way to start is a short conversation about where your business is heading.
-            </p>
-            <p className="text-base text-slate-500 leading-relaxed mt-4 max-w-2xl">
-              Every inquiry is read by a member of our team — not routed through a call centre. If your project isn't a good fit for us, we'll tell you honestly and point you in the right direction.
-            </p>
-          </Reveal>
+      <PageHero eyebrow="Contact" title="Let's build something" highlight="great together" testid="contact-hero">
+        <p>
+          Tell us about your project and we'll respond within one business day with clear next steps — whether it's a new website, a custom application, AI automation, a blockchain platform or a growth campaign.
+        </p>
+        <p className="text-base">
+          Every enquiry is read by a member of our team, not a call centre. If we're not the right fit, we'll tell you honestly and point you in the right direction.
+        </p>
+      </PageHero>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 mt-14 pb-6">
+      <section className="bg-[#F5F8FF] pb-20 sm:pb-28" data-testid="contact-body">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 pt-14">
             <div className="lg:col-span-2 space-y-4">
               {channels.map((c, i) => (
                 <Reveal key={c.label} delay={i * 0.05}>
@@ -48,11 +45,11 @@ export default function Contact() {
                       href={c.href}
                       target={c.href.startsWith("http") ? "_blank" : undefined}
                       rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="card-lift flex items-center gap-4 rounded-xl bg-white border border-slate-200 p-5"
+                      className="card-lift flex items-center gap-4 rounded-2xl bg-white border border-slate-200 p-5"
                       data-testid={c.testid}
                     >
-                      <span className="w-11 h-11 rounded-md bg-blue-600/10 border border-blue-600/15 flex items-center justify-center shrink-0">
-                        <c.icon className="w-5 h-5 text-blue-600" />
+                      <span className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shrink-0">
+                        <c.icon className="w-5 h-5 text-white" />
                       </span>
                       <span>
                         <span className="block text-xs text-slate-400">{c.label}</span>
@@ -60,9 +57,9 @@ export default function Contact() {
                       </span>
                     </a>
                   ) : (
-                    <div className="card-lift flex items-center gap-4 rounded-xl bg-white border border-slate-200 p-5" data-testid={c.testid}>
-                      <span className="w-11 h-11 rounded-md bg-blue-600/10 border border-blue-600/15 flex items-center justify-center shrink-0">
-                        <c.icon className="w-5 h-5 text-blue-600" />
+                    <div className="card-lift flex items-center gap-4 rounded-2xl bg-white border border-slate-200 p-5" data-testid={c.testid}>
+                      <span className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shrink-0">
+                        <c.icon className="w-5 h-5 text-white" />
                       </span>
                       <span>
                         <span className="block text-xs text-slate-400">{c.label}</span>
@@ -75,7 +72,7 @@ export default function Contact() {
             </div>
 
             <Reveal delay={0.12} className="lg:col-span-3">
-              <div className="rounded-xl bg-white border border-slate-200 p-7 sm:p-9 shadow-sm" data-testid="contact-form-card">
+              <div className="rounded-2xl bg-white border border-slate-200 p-7 sm:p-9 shadow-xl shadow-blue-900/5" data-testid="contact-form-card">
                 <h2 className="font-heading text-2xl font-bold text-[#0B1739] mb-6">Tell us about your project</h2>
                 <EnquiryForm defaultService={service} />
               </div>

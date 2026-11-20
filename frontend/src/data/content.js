@@ -170,7 +170,7 @@ export const WHY_US = [
   {
     title: "Focused on Results",
     description:
-      "Everything we do has a clear purpose and measurable goal. Results aren't delayed, they're delivered.",
+      "Every piece of work is tied to a measurable goal agreed up front, so you can see exactly what it delivered.",
   },
   {
     title: "Built for Long-Term Growth",
@@ -180,12 +180,76 @@ export const WHY_US = [
 ];
 
 export const INDUSTRIES = [
-  { icon: Building2, name: "Property & Construction", detail: "High-value pipelines and portfolio showcases." },
-  { icon: HeartPulse, name: "Healthcare & Wellness", detail: "Compliant patient generation and booking funnels." },
-  { icon: Briefcase, name: "Professional & B2B Services", detail: "Authority positioning for high-value contracts." },
-  { icon: Wrench, name: "Home & Trade Services", detail: "Dominating local search for consistent leads." },
-  { icon: Hotel, name: "Hospitality & Leisure", detail: "Direct reservation and acquisition campaigns." },
-  { icon: ShoppingCart, name: "Retail & E-commerce", detail: "Targeted campaigns for commercial growth." },
+  { icon: Building2, name: "Property & Construction", detail: "Listing portals, project showcases and lead pipelines for high-value deals.", service: "web" },
+  { icon: HeartPulse, name: "Healthcare & Wellness", detail: "Booking funnels, patient portals and privacy-conscious enquiry handling.", service: "web" },
+  { icon: Briefcase, name: "Professional & B2B Services", detail: "Authority content, SEO and client portals that win bigger contracts.", service: "seo" },
+  { icon: Wrench, name: "Home & Trade Services", detail: "Local SEO and call-ready landing pages that keep the diary full.", service: "seo" },
+  { icon: Hotel, name: "Hospitality & Leisure", detail: "Direct-booking sites and paid campaigns that cut commission fees.", service: "ppc" },
+  { icon: ShoppingCart, name: "Retail & E-commerce", detail: "Fast Shopify and custom stores with AI-powered product discovery.", service: "web" },
+];
+
+export const TECH_STACK = [
+  "React", "Next.js", "Node.js", "Python", "TypeScript", "OpenAI", "Claude", "LangChain",
+  "Solidity", "Ethereum", "Solana", "Polygon", "Shopify", "WordPress", "AWS", "Google Cloud",
+  "PostgreSQL", "MongoDB", "Google Ads", "Meta Ads",
+];
+
+export const ENGAGEMENTS = [
+  {
+    name: "Fixed-Scope Project",
+    best: "Best for websites, MVPs and one-off builds",
+    points: [
+      "Scope, timeline and price agreed before work starts",
+      "Milestone-based delivery and sign-off",
+      "Launch support and handover documentation",
+    ],
+  },
+  {
+    name: "Dedicated Product Team",
+    best: "Best for funded startups and ongoing products",
+    points: [
+      "Designers, engineers and a lead who know your product",
+      "Two-week sprints with demos you can see",
+      "Scale the team up or down as you grow",
+    ],
+    highlight: true,
+  },
+  {
+    name: "Monthly Growth Retainer",
+    best: "Best for SEO, PPC and social media",
+    points: [
+      "A clear monthly plan tied to your targets",
+      "Plain-English reports on what moved and why",
+      "No long lock-in contracts",
+    ],
+  },
+];
+
+export const FAQS = [
+  {
+    q: "How much does a project cost?",
+    a: "It depends on scope. After a short discovery call we send a fixed quote with a clear breakdown, so you know the full cost before anything starts. There's no charge for the first conversation.",
+  },
+  {
+    q: "How long does it take to build a website or app?",
+    a: "A marketing website typically takes a few weeks; a custom web application or MVP usually runs a few months. You get a realistic timeline in your proposal, with milestones you can track.",
+  },
+  {
+    q: "Do you work with clients outside your time zone?",
+    a: "Yes. We work with clients worldwide and schedule calls in your business hours. Day-to-day updates happen over email, WhatsApp or your preferred project tool.",
+  },
+  {
+    q: "Do I own the code and designs?",
+    a: "Yes. Once the project is paid for, the source code, designs and accounts are yours. We hand everything over with documentation.",
+  },
+  {
+    q: "Do I actually need AI or blockchain?",
+    a: "Often you don't, and we'll say so. We recommend AI or blockchain only where it saves real time or money, or opens new revenue. Otherwise a well-built conventional system is faster and cheaper.",
+  },
+  {
+    q: "What happens after launch?",
+    a: "We offer maintenance, hosting support and growth retainers for SEO, ads and social, so the people who built your product can keep improving it.",
+  },
 ];
 
 // Placeholder stats removed pending confirmed numbers from the owner.
