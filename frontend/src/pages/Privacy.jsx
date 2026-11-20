@@ -12,13 +12,15 @@ export default function Privacy() {
         path="/privacy"
       />
 
-      <section className="bg-[#F3F7FF] border-b border-slate-200 pt-28 sm:pt-40 pb-14 sm:pb-16">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+      <section className="relative overflow-hidden bg-ink pt-32 sm:pt-40 pb-14 sm:pb-16">
+        <div className="absolute inset-0 bg-grid" />
+        <div className="glow w-[420px] h-[420px] bg-blue-600/25 -top-40 -left-24" />
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8">
           <Reveal>
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-[#0B1739]">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight !text-white">
               Privacy Policy
             </h1>
-            <p className="text-base text-slate-500 mt-4">Last updated: November 2026</p>
+            <p className="text-base text-slate-400 mt-4">Last updated: November 2026</p>
           </Reveal>
         </div>
       </section>

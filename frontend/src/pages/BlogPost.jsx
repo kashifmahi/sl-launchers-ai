@@ -18,15 +18,17 @@ export default function BlogPost() {
         path={`/blog/${post.slug}`}
       />
 
-      <section className="bg-[#F3F7FF] border-b border-slate-200 pt-28 sm:pt-40 pb-14 sm:pb-20">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+      <section className="relative overflow-hidden bg-ink pt-32 sm:pt-40 pb-14 sm:pb-20">
+        <div className="absolute inset-0 bg-grid" />
+        <div className="glow w-[420px] h-[420px] bg-blue-600/25 -top-40 -left-24" />
+        <div className="relative max-w-3xl mx-auto px-5 sm:px-8">
           <Reveal>
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-blue-600 font-medium hover:text-blue-500 transition-colors duration-200" data-testid="back-to-blog">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-cyan-300 font-medium hover:text-white transition-colors duration-200" data-testid="back-to-blog">
               <ArrowLeft className="w-4 h-4" /> Back to Blog
             </Link>
             <div className="mt-8">
-              <span className="text-xs tracking-[0.2em] uppercase font-bold text-cyan-600">{post.category}</span>
-              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0B1739] mt-4 leading-[1.15]" data-testid="post-title">
+              <span className="text-xs tracking-[0.2em] uppercase font-bold text-cyan-300">{post.category}</span>
+              <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight !text-white mt-4 leading-[1.15]" data-testid="post-title">
                 {post.title}
               </h1>
               <div className="flex items-center gap-4 mt-5 text-sm text-slate-400">
