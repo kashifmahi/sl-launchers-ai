@@ -13,6 +13,10 @@ import {
   ShoppingCart,
 } from "lucide-react";
 
+// Google Calendar appointment schedule (30-min calls, Google Meet link added automatically)
+export const BOOKING_URL =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1lxv6hrl6aG89eNemwPLNFXY9MCpS-gvt7IW6EfQB8_MjA6QLrXuLkbDTL3UmdO9q3DDsTPZgK";
+
 export const CONTACT = {
   email: "info@sllaunchers.com",
   phone: "+61 468 187 586",

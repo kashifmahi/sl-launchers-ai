@@ -72,7 +72,7 @@ export default function Navbar() {
             <Phone className="w-4 h-4" /> {CONTACT.phone}
           </a>
           <Button asChild className="rounded-full bg-blue-600 hover:bg-blue-500 text-white min-h-11 px-5 shadow-lg shadow-blue-600/30" data-testid="nav-cta-button">
-            <Link to="/contact">Book a Call</Link>
+            <Link to="/book">Book a Call</Link>
           </Button>
         </div>
 
@@ -105,7 +105,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <Button asChild className="mt-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white min-h-11" data-testid="mobile-nav-cta-button">
-            <Link to="/contact">Book a Call</Link>
+            <Link to="/book">Book a Call</Link>
           </Button>
         </div>
       )}

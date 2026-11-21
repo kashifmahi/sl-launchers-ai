@@ -157,7 +157,7 @@ export default function Home() {
             <Reveal delay={0.24}>
               <div className="flex flex-wrap gap-3.5 mt-9">
                 <Button asChild size="lg" className="rounded-full bg-blue-600 hover:bg-blue-500 text-white px-7 min-h-12 shadow-lg shadow-blue-600/30 transition-transform duration-200 hover:-translate-y-0.5" data-testid="hero-cta-primary">
-                  <Link to="/contact">
+                  <Link to="/book">
                     Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
